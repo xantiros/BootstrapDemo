@@ -26,5 +26,11 @@ namespace MVCDemo.Controllers
 
             return View();
         }
+        public ActionResult SignUp()
+        {
+            ViewBag.Message = "Employee Sing Up";
+
+            return View();
+        }
     }
 }
