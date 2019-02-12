@@ -1,31 +1,85 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<div class="alert alert-danger" role="alert">
+    <button type="button" class="close" data-dismiss="alert">
+     Close
+    </button>
+    The server is currently down for maintance.
+</div>
 
 <div class="jumbotron">
     <h1>ASP.NET</h1>
     <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <p>
+        <a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a>
+        <button class="btn btn-success btn-lg pull-right visible-lg">Large Layout</button>
+        <button class="btn btn-warning btn-lg pull-right visible-md">Medium Layout</button>
+        <button class="btn btn-danger btn-lg pull-right visible-sm">Small Layout</button>
+        <button class="btn btn-default btn-lg pull-right visible-xs">Extra Small Layout</button>
+    </p>
 </div>
 
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-6">
         <h2>Getting started</h2>
         <p>
             ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
             enables a clean separation of concerns and gives you full control over markup
             for enjoyable, agile development.
         </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <p><a class="btn btn-info btn-lg" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
         <h2>Get more libraries</h2>
         <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <p><a class="btn btn-primary" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
         <h2>Web Hosting</h2>
         <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <p><a class="btn btn-warning" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <blockquote>
+            <p>The best thing to learning is C#</p>
+            <footer>Me</footer>
+        </blockquote>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Icon</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><i class="far fa-address-card"></i></td>
+                    <td>Ben</td>
+                    <td>TSTSTS</td>
+                    <td class="text-primary">tstst@gmail.com</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-ambulance"></i></td>
+                    <td>Sam</td>
+                    <td class="danger">SamSam</td>
+                    <td>samsam@gmail.com</td>
+                </tr>
+                <tr class="success">
+                    <td><i class="far fa-bell"></i></td>
+                    <td>Jane</td>
+                    <td>Doe</td>
+                    <td>jane@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
