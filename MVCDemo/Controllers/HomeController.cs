@@ -1,5 +1,7 @@
 ﻿using MVCDemo.Models;
 using System.Web.Mvc;
+using DataLibrary.BusinessLogic;
+using System.Collections.Generic;
 
 namespace MVCDemo.Controllers
 {
@@ -23,6 +25,27 @@ namespace MVCDemo.Controllers
 
             return View();
         }
+        public ActionResult ViewEmployees()
+        {
+            ViewBag.Message = "Employees List";
+
+            var data = EmployeeProcessor.LoadEmployees();
+            List<EmployeeModel> employees = new List<EmployeeModel>();
+
+            foreach (var row in data)
+            {
+                employees.Add(new EmployeeModel
+                {
+                    EmployeeId = row.EmployeeId,
+                    FirstName = row.FirstName,
+                    LastName = row.LastName,
+                    EmailAddress = row.EmailAddress,
+                    ConfirmEmail = row.EmailAddress
+                });
+            }
+
+            return View(employees);
+        }
         public ActionResult SignUp()
         {
             ViewBag.Message = "Employee Sing Up";
@@ -35,6 +58,7 @@ namespace MVCDemo.Controllers
         {
             if(ModelState.IsValid)
             {
+                int recordsCreated = EmployeeProcessor.CreateEmployee(model.EmployeeId, model.FirstName, model.LastName, model.EmailAddress);
                 return RedirectToAction("Index");
             }
 

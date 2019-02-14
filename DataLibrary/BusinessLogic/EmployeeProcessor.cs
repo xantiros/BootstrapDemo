@@ -16,8 +16,8 @@ namespace DataLibrary.BusinessLogic
                 EmailAddress = emailAddress
             };
 
-            string sql = @"inset into dbo.Employee (EmployeeId, FirstName, LastName, EmailAddress)
-                        values (@EmployeeId, @Firstname, @LastName, @EmailAddress);";
+            string sql = @"insert into dbo.Employee (EmployeeId, FirstName, LastName, EmailAddress)
+                        values (@EmployeeId, @FirstName, @LastName, @EmailAddress);";
 
             return SqlDataAccess.SaveData(sql, data);
         }
