@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using MVCDemo.Models;
 using System.Web.Mvc;
 
 namespace MVCDemo.Controllers
@@ -29,6 +26,17 @@ namespace MVCDemo.Controllers
         public ActionResult SignUp()
         {
             ViewBag.Message = "Employee Sing Up";
+
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult SignUp(EmployeeModel model)
+        {
+            if(ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
 
             return View();
         }

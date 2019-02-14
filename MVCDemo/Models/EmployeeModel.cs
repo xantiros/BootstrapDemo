@@ -27,6 +27,7 @@ namespace MVCDemo.Models
         public string ConfirmEmail { get; set; }
 
         [Display(Name = "Password")]
+        [Required(ErrorMessage = "You must have a password.")]
         [DataType(DataType.Password)]
         [StringLength(100, MinimumLength = 10, ErrorMessage = "You need to provide a long enough password.") ]
         public string Password { get; set; }
